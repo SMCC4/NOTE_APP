@@ -49,3 +49,21 @@
         </div>
     </div>
 </section>
+
+<!-- Pop-up message -->
+<div id="overlay"></div>
+
+<div id="popup">
+  <h2>Welcome to Sancta Maria Basketball</h2>
+  <p>Join our basketball community!</p>
+  <button onclick="closePopup()">Close</button>
+  <button onclick="openSignUpForm()">Sign Up</button>
+  
+  <!-- Sign-up form (initially hidden) -->
+  <form id="signup-form" style="display: none;" action="/submit-form" method="post">
+    <h3>Sign Up</h3>
+    <input type="email" name="email" placeholder="Enter your email">
+    <button type="submit">Submit</button>
+    <button type="button" onclick="hideSignUpForm()">Cancel</button>
+  </form>
+</div>
