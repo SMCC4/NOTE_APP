@@ -57,14 +57,15 @@
   <h2>Welcome to Sancta Maria Basketball</h2>
   <p>Join our basketball community!</p>
   <button onclick="closePopup()">Close</button>
-  <button onclick="openSignUpForm()">Sign Up</button>
+  <button class="close-btn" onclick="closePopup()">Close</button>
+  <button class="sign-up-btn" onclick="openSignUpForm()">Sign Up</button>
   
   <!-- Sign-up form (initially hidden) -->
   <form id="signup-form" style="display: none;" action="/submit-form" method="post">
     <h3>Sign Up</h3>
     <input type="email" name="email" placeholder="Enter your email">
     <button type="submit">Submit</button>
-    <button type="button" onclick="hideSignUpForm()">Cancel</button>
+    <button type="button" class="cancel-btn" onclick="hideSignUpForm()">Cancel</button>
   </form>
 </div>
 
@@ -85,7 +86,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(247, 243, 4);
+    background-color: rgb(5, 125, 238);
     padding: 20px;
     border-radius: 10px;
     display: none;
@@ -106,6 +107,31 @@
 
 #popup button:last-child {
     margin-right: 0;
+}
+
+/* Button colors */
+.close-btn {
+    background-color: #ecb604; /* Light grey */
+    color: #fff; /* Black */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.sign-up-btn {
+    background-color: #ecb604; /* Blue */
+    color: #fff; /* White */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.cancel-btn {
+    background-color: #ecb604; /* Red */
+    color: #fff; /* White */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 </style>
 
@@ -141,3 +167,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 {% endblock %}
+
+
+
